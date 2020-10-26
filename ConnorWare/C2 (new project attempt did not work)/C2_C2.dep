@@ -1,0 +1,5 @@
+Dependencies for Project 'C2', Target 'C2': (DO NOT MODIFY !)
+F (.\main.c)(0x5699C9C4)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --signed_chars -I.. -I..\..\..-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\RV31\INC"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\CMSIS\Include"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\Inc\TI\TM4C123"-DTM4C1231C3PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (TExaS.h)(0x5699C9C4)
+F (.\startup.s)(0x5701FDF8)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\RV31\INC"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\CMSIS\Include"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\Inc\TI\TM4C123"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\texas.o)(0x5699C9C4)()

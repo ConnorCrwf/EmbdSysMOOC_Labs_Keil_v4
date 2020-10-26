@@ -1,0 +1,10 @@
+Dependencies for Project 'Lab5', Target 'FunctionsInC': (DO NOT MODIFY !)
+F (.\startup.s)(0x5701EFE8)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\RV31\INC"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\CMSIS\Include"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\Inc\Luminary"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\UART.c)(0x54A0E02C)(-c --cpu Cortex-M4 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\RV31\INC"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\CMSIS\Include"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\Inc\Luminary"-Drvmdk -DPART_LM4F120H5QR-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (UART.h)(0x54A0E03A)
+I (D:\Users\Connor\Documents\Program Directories\Keil\ARM\ARMCC\include\stdio.h)(0x51C87C24)
+F (.\main.c)(0x5E375EEF)(-c --cpu Cortex-M4 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\RV31\INC"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\CMSIS\Include"-I "D:\Users\Connor\Documents\Program Directories\Keil\ARM\Inc\Luminary"-Drvmdk -DPART_LM4F120H5QR-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (D:\Users\Connor\Documents\Program Directories\Keil\ARM\ARMCC\include\stdio.h)(0x51C87C24)
+I (uart.h)(0x54A0E03A)
+I (TExaS.h)(0x5699BFE0)
+F (.\texas.o)(0x5699BFE0)()
