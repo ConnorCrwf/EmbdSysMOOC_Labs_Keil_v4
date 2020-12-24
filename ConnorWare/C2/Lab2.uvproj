@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>HelloLaunchPad</TargetName>
+      <TargetName>Lab2</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>HelloLaunchPad</OutputName>
+          <OutputName>Lab2</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
