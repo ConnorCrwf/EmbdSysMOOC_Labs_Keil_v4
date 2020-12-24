@@ -1,45 +1,6 @@
 # Prerequisites
 *.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-*.vs
-
-
-
-# Other Stuff I found to exclude online
-
-# Prerequisites
-*.d
-
 # Object files
 *.o
 *.ko
@@ -89,3 +50,32 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Other Filetypes
+*.vs
+*.vs/
+*.crf
+*.dep
+*.htm
+*.axf
