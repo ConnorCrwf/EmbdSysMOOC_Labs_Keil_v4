@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>C7_SOS</TargetName>
+      <TargetName>Lab6_Solution</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>C7_SOS</OutputName>
+          <OutputName>Lab6_Solution</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -104,7 +104,7 @@
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments>-MPU</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pCM4 -dLaunchPadDLL</SimDlgDllArguments>
+          <SimDlgDllArguments>-pCM4 -dedXLab6</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
@@ -170,7 +170,7 @@
             <Capability>1</Capability>
             <DriverSelection>4097</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>BIN\lmidk-agdi.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -210,7 +210,7 @@
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M4"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
-            <mOS>0</mOS>
+            <mOS>2</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
             <hadIROM>1</hadIROM>
@@ -411,9 +411,19 @@
               <FilePath>.\startup.s</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>Lab6_Solution.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\Lab6_Solution.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Object code</GroupName>
+          <Files>
+            <File>
+              <FileName>texas.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>.\texas.o</FilePath>
             </File>
           </Files>
         </Group>

@@ -71,7 +71,7 @@
         <LExpSel>0</LExpSel>
       </OPTXL>
       <OPTFL>
-        <tvExp>0</tvExp>
+        <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
@@ -121,12 +121,12 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>lmidk-agdi</Key>
-          <Name>-U -O4622 -S3 -FO29</Name>
+          <Name>-U-O4622 -O4622 -S3 -FO29</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(3004=849,193,1245,550,0)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(3004=2725,129,3121,486,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -171,6 +171,12 @@
       </DebugFlag>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
+      <SystemViewers>
+        <Entry>
+          <Name>OS Support\TExaS Grader v2.1</Name>
+          <WinId>35905</WinId>
+        </Entry>
+      </SystemViewers>
     </TargetOption>
   </Target>
 
@@ -188,7 +194,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>270</TopLine>
+      <TopLine>271</TopLine>
       <CurrentLine>277</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup.s</PathWithFileName>
@@ -202,10 +208,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>47</TopLine>
-      <CurrentLine>90</CurrentLine>
+      <TopLine>20</TopLine>
+      <CurrentLine>60</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\BranchingFunctionsDelays.c</PathWithFileName>
       <FilenameWithoutPath>BranchingFunctionsDelays.c</FilenameWithoutPath>

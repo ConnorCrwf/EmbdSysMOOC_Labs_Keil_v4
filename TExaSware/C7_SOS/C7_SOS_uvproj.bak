@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Lab6</TargetName>
+      <TargetName>C7_SOS</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -30,7 +30,6 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile></SFDFile>
-          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -45,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>Lab6</OutputName>
+          <OutputName>C7_SOS</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -98,13 +97,12 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
-          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments>-MPU</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pCM4 -dedXLab6</SimDlgDllArguments>
+          <SimDlgDllArguments>-pCM4 -dLaunchPadDLL</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
@@ -138,7 +136,6 @@
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>3</TargetSelection>
@@ -167,14 +164,9 @@
             <Capability>1</Capability>
             <DriverSelection>4097</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
           <Flash2>BIN\lmidk-agdi.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
-          <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
-          <pFcArmRoot></pFcArmRoot>
-          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -207,7 +199,7 @@
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M4"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
-            <mOS>2</mOS>
+            <mOS>0</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
             <hadIROM>1</hadIROM>
@@ -404,19 +396,9 @@
               <FilePath>.\startup.s</FilePath>
             </File>
             <File>
-              <FileName>BranchingFunctionsDelays.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\BranchingFunctionsDelays.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Object code</GroupName>
-          <Files>
-            <File>
-              <FileName>texas.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>.\texas.o</FilePath>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -21,7 +21,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>Lab7</TargetName>
+    <TargetName>C7_SOS</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -76,26 +76,9 @@
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>255</CpuCode>
-      <Books>
-        <Book>
-          <Number>0</Number>
-          <Title>Data Sheet</Title>
-          <Path>DATASHTS\TI\TM4C123\TM4C123GH6PM.pdf</Path>
-        </Book>
-        <Book>
-          <Number>1</Number>
-          <Title>Technical Reference Manual</Title>
-          <Path>datashts\arm\cortex_m4\r0p1\DDI0439C_CORTEX_M4_R0P1_TRM.PDF</Path>
-        </Book>
-        <Book>
-          <Number>2</Number>
-          <Title>Generic User Guide</Title>
-          <Path>datashts\arm\cortex_m4\r0p1\DUI0553A_CORTEX_M4_DGUG.PDF</Path>
-        </Book>
-      </Books>
       <DebugOpt>
-        <uSim>1</uSim>
-        <uTrg>0</uTrg>
+        <uSim>0</uSim>
+        <uTrg>1</uTrg>
         <sLdApp>1</sLdApp>
         <sGomain>1</sGomain>
         <sRbreak>1</sRbreak>
@@ -113,7 +96,7 @@
         <tRtrace>0</tRtrace>
         <sRSysVw>1</sRSysVw>
         <tRSysVw>1</tRSysVw>
-        <tPdscDbg>1</tPdscDbg>
+        <tPdscDbg>0</tPdscDbg>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>3</nTsel>
@@ -132,18 +115,24 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name>ÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÈ`¸
+	%j×ôñ³</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
-          <Name>UL2CM3(-O207 -S0 -C0 -FO7  -FN1 -FC800 -FD20000000 -FF0TM4C123_256 -FL040000 -FS00</Name>
+          <Name>UL2CM3(-O207 -S0 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0TM4C123_32 -FS00 -FL08000)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(2304=149,156,757,513,0)(3004=811,192,1207,545,1)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=90,117,456,339,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(9108=-1,-1,-1,-1,0)(9106=-1,-1,-1,-1,0)(9104=-1,-1,-1,-1,0)(9107=-1,-1,-1,-1,0)(9102=685,167,1081,441,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGTARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=413,172,590,433,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -153,10 +142,27 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>lmidk-agdi</Key>
-          <Name>-U0E204475 -O4622 -S3 -FO29</Name>
+          <Name>-U-O4622 -O4622 -S3 -FO29</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Led</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Sw1</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Sw2</ItemText>
+        </Ww>
+      </WatchWindow1>
       <MemoryWindow1>
         <Mm>
           <WinNumber>1</WinNumber>
@@ -195,6 +201,12 @@
       </DebugFlag>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
+      <SystemViewers>
+        <Entry>
+          <Name>System Viewer\GPIOF</Name>
+          <WinId>35905</WinId>
+        </Entry>
+      </SystemViewers>
     </TargetOption>
   </Target>
 
@@ -212,7 +224,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>275</TopLine>
+      <TopLine>267</TopLine>
       <CurrentLine>277</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup.s</PathWithFileName>
@@ -226,37 +238,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>45</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>54</TopLine>
-      <CurrentLine>80</CurrentLine>
+      <TopLine>87</TopLine>
+      <CurrentLine>125</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-  </Group>
-
-  <Group>
-    <GroupName>Object code</GroupName>
-    <tvExp>1</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
-    <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>3</FileNumber>
-      <FileType>3</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\texas.o</PathWithFileName>
-      <FilenameWithoutPath>texas.o</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
