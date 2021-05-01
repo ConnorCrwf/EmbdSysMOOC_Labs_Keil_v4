@@ -46,6 +46,7 @@ int main(void){ unsigned long volatile delay;
   GPIO_PORTE_AMSEL_R &= ~0x17;      // no analog
   GPIO_PORTE_PCTL_R &= ~0x000F0FFF; // bits for PE4,PE2,PE1,PE0
   GPIO_PORTE_DEN_R |= 0x17;         // enable PE4,PE2,PE1,PE0
+
   EnableInterrupts();
   while(1){
     arm = GPIO_PORTE_DATA_R&0x04;    // arm 0 if deactivated, 1 if activated

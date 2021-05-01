@@ -66,7 +66,7 @@ void UART_Init(void){
   UART1_CTL_R |= UART_CTL_UARTEN;       // enable UART
   GPIO_PORTC_AFSEL_R |= 0x30;           // enable alt funct on PC5-4
   GPIO_PORTC_DEN_R |= 0x30;             // enable digital I/O on PC5-4
-                                        // configure PC5-4 as UART1
+                                        // configure PC5-4 as UART1, PC4 is U1Rx and PC5 is U1Tx. Reference How to change PCTL register for UART page
   GPIO_PORTC_PCTL_R = (GPIO_PORTC_PCTL_R&0xFF00FFFF)+0x00220000;
   GPIO_PORTC_AMSEL_R &= ~0x30;          // disable analog functionality on PC5-4
 }

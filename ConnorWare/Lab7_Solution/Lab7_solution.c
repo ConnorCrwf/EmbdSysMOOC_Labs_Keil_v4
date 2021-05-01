@@ -49,6 +49,7 @@ unsigned long LED_R;
 //   Function Prototypes
 void PortF_Init(void);
 void Delay1ms(unsigned long msecs);
+void Delay1ms_RealBoard(unsigned long msecs);
 void DelayHalfSec(unsigned long halfsecs);
 void EnableInterrupts(void);  // Enable interrupts
 void WaitForASLow(void);
@@ -75,11 +76,11 @@ int main(void){
     SetReady();
 		WaitForASLow();
     ClearReady();
-		Delay1ms(10);
+		Delay1ms_RealBoard(10);
 		WaitForASHigh();
-		Delay1ms(250);
+		Delay1ms_RealBoard(250);
 	SetVT();
-	Delay1ms(250);
+	Delay1ms_RealBoard(250);
 	ClearVT();
 //	Delay1ms(2000);
     // h) wait 250ms
@@ -191,6 +192,17 @@ void Delay1ms(unsigned long n) {
             time--;
         }
         n--;
+    }
+}
+
+void Delay1ms_RealBoard(unsigned long msecs) {
+    unsigned long volatile time;
+    while (msecs > 0) {
+        time = 16000*25/30;  // 1msec, tuned at 80 MHz
+        while (time) {
+            time--;
+        }
+        msecs--;
     }
 }
 

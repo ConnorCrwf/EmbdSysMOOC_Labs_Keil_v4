@@ -54,12 +54,35 @@ void LED_Off(void){
   GPIO_PORTA_DATA_R &= ~0x04;
 }
 
+void Delay1ms_RealBoard(unsigned long msecs) {
+    unsigned long volatile time;
+    while (msecs > 0) {
+        time = 16000*25/30;  // 1msec, tuned at 80 MHz
+        while (time) {
+            time--;
+        }
+        msecs--;
+    }
+}
+
+void Delay1ms(unsigned long n) {
+    unsigned long volatile time;
+    while (n) {
+        time = 72724 * 2 / 91;  // 1msec, tuned at 80 MHz
+        while (time) {
+            time--;
+        }
+        n--;
+    }
+}
+
 //debug code
 
 int main(void){
   LED_Init();               // initialize PA2 and make it output
   while(1){
     LED_On();
+		Delay1ms(1000);
     LED_Off();
   }
 }

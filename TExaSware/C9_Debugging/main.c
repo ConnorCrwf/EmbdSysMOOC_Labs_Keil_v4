@@ -77,6 +77,7 @@ int main(void){  unsigned long i,last,now;
   }
 }
 
+
 // first data point is wrong, the others will be correct
 long Errors;
 #define CORRECT 1600000

@@ -68,12 +68,13 @@ typedef const struct State STyp;
 #define goE   2
 #define waitE 3
 STyp FSM[4]={
- {0x21,3000,{goN,waitN,goN,waitN}}, 
- {0x22, 500,{goE,goE,goE,goE}},
- {0x0C,3000,{goE,goE,waitE,waitE}},
- {0x14, 500,{goN,goN,goN,goN}}};
+ {0x21,100,{goN,waitN,goN,waitN}}, 
+ {0x22, 100,{goE,goE,goE,goE}},
+ {0x0C,100,{goE,goE,waitE,waitE}},
+ {0x14, 100,{goN,goN,goN,goN}}};
 unsigned long S;  // index to the current state 
 unsigned long Input; 
+
 int main(void){ volatile unsigned long delay;
   PLL_Init();       // 80 MHz, Program 10.1
   SysTick_Init();   // Program 10.2

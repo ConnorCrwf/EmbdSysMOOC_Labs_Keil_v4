@@ -195,11 +195,13 @@ char character;
 void UART_OutUHex(unsigned long number){
 // This function uses recursion to convert the number of
 //   unspecified length as an ASCII string
+  //if number is greater than or = to 16
   if(number >= 0x10){
     UART_OutUHex(number/0x10);
     UART_OutUHex(number%0x10);
   }
   else{
+      //if number is less than 10, can convert it to ASCII by just adding a '0'
     if(number < 0xA){
       UART_OutChar(number+'0');
      }

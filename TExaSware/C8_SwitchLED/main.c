@@ -20,9 +20,10 @@ Learning Objectives:
 // PD3 is an output to LED output, positive logic
 // PD0 is an input from switch, positive logic
 // to set the switch in the simulator type this into command window
-// PORTD = 1 
-// to release the switch in the simulator type this into command window
-// PORTD = 0 
+// GPIO_PORTD_DATA_R = 1 or use ADC or DAC peripheral
+// this command PORTD = 1 doesn't work
+// to release the switch in the simulator type this into command window GPIO_PORTD_DATA_R = 0
+// PORTD = 0 doesn't work
 #define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))
 #define GPIO_PORTD_DATA_R       (*((volatile unsigned long *)0x400073FC))
 #define GPIO_PORTD_DIR_R        (*((volatile unsigned long *)0x40007400))
@@ -41,9 +42,18 @@ int main(void){ unsigned long volatile delay;
   GPIO_PORTD_PCTL_R &= ~0x0000F00F; // bits for PD3, PD0
   GPIO_PORTD_DEN_R |= 0x09;         // enable PD3, PD0
   while(1){
+//		Positive Logic because input to port pin is high if switch is pressed and low if not pressed
     in = (GPIO_PORTD_DATA_R&0x01); // in 0 if not pressed, 1 if pressed
-    out = (in^0x01)<<3;   // out 8 if not pressed, 0 if switch pressed
-    GPIO_PORTD_DATA_R = out;
+    //out = (in^0x01)<<3;   // out 8 if not pressed, 0 if switch pressed, moves the 1 bit over 3 places which makes it an 8
+//    or can do it this way
+		if(in == 0x00){              // zero means switch is not pressed
+				out = 0x08;   //LED remains on when switch is not pressed because it's a positive logic interface
+			}
+			else          // one means switch is not pressed
+			{
+				out = 0x00;   //LED shuts off when switch is pressed
+			}
+		GPIO_PORTD_DATA_R = out;
   }
 }
 

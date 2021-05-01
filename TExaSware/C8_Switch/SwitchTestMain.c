@@ -74,11 +74,14 @@ int main(void){ unsigned long status;
   GPIO_PORTF_PCTL_R = (GPIO_PORTF_PCTL_R&0xFFFF000F)+0x00000000;
   GPIO_PORTF_AMSEL_R = 0;     // disable analog functionality on PF
   while(1){
-    status = Board_Input();
+    //status = Board_Input();
+    status = Switch_Input();
     switch(status){                    // switches are negative logic on PF0 and PF4
+      case 0x20: LEDS = GREEN; break;  // PA5 switch pressed
+      case 0x00: LEDS = 0; break;      // PA5 switch not pressed
       case 0x01: LEDS = BLUE; break;   // SW1 pressed
       case 0x10: LEDS = RED; break;    // SW2 pressed
-      case 0x00: LEDS = GREEN; break;  // both switches pressed
+//      case 0x00: LEDS = GREEN; break;  // both switches pressed
       case 0x11: LEDS = 0; break;      // neither switch pressed
       default: LEDS = (RED|GREEN|BLUE);// unexpected return value
     }

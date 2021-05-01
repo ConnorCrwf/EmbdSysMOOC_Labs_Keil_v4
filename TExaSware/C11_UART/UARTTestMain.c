@@ -61,7 +61,9 @@ int main(void){
     UART_OutString(" OutString="); UART_OutString(string); OutCRLF();
 
     UART_OutString("InUDec: ");  n=UART_InUDec();
-    UART_OutString(" OutUDec="); UART_OutUDec(n); OutCRLF();
+    UART_OutString(" OutUDec="); 
+	UART_OutUDec(n); 
+	OutCRLF();
 
     UART_OutString("InUHex: ");  n=UART_InUHex();
     UART_OutString(" OutUHex="); UART_OutUHex(n); OutCRLF();
